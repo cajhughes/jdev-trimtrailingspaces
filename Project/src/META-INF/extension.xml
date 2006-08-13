@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<ex:extension xmlns:ex="http://jcp.org/jsr/198/extension-manifest"
+              xmlns="http://xmlns.oracle.com/jdeveloper/1013/extension"
+              id="chughes.jdev.TrimTrailing"
+              version="10.1.3.0.5"
+              esdk-version="1.0"
+              rsbundle-class="chughes.jdev.trim.view.resource.TrimResources">
+  <ex:name rskey="TrimAddinName"/>
+  <ex:owner>Chris Hughes</ex:owner>
+  <ex:hooks>
+    <jdeveloper-hook>
+      <addins>
+        <addin>chughes.jdev.trim.controller.TrimController</addin>
+      </addins>
+    </jdeveloper-hook>
+    <ex:feature-hook>
+      <ex:description rskey="TrimAddinDescription"/>
+      <ex:optional>true</ex:optional>
+    </ex:feature-hook>
+  </ex:hooks>
+</ex:extension>
