@@ -5,6 +5,7 @@ import chughes.jdev.trim.view.TrimMenuItem;
 import chughes.jdev.trim.view.TrimMenuListener;
 import chughes.jdev.trim.view.TrimUndoableEdit;
 import chughes.jdev.util.IdeUtil;
+import chughes.jdev.util.KeyStrokeUtil;
 import chughes.jdev.util.NodeUtil;
 import chughes.jdev.util.StringBufferUtil;
 import javax.swing.undo.UndoableEdit;
@@ -50,6 +51,7 @@ public class TrimController
          * Register our listener for ContextMenu information
          */
         EditorManager.getEditorManager().getContextMenu().addContextMenuListener(listener);
+        Ide.getKeyStrokeContextRegistry().addContext(KeyStrokeUtil.getKeyStrokeContext(this, TRIM_COMMAND));
     }
 
     /************************************************************************
