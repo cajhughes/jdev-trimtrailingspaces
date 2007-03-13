@@ -22,18 +22,7 @@ public final class TrimMenuItem
                                                   final int commandId)
     {
         JMenuItem menuItem = null;
-        String menuLabel =
-            TrimResourceUtil.getString(TrimResourceKeys.TRIM_MENU_LABEL);
-        Icon icon =
-            new ImageIcon(
-                GraphicsUtils.loadFromResource(
-                    TrimResourceUtil.getString(TrimResourceKeys.TRIM_MENU_ICON),
-                    controller.getClass()));
-        IdeAction action =
-            IdeAction.get(commandId, null, menuLabel, null, null, icon, null,
-                          true);
-        action.addController(controller);
-        menuItem = Ide.getMenubar().createMenuItem(action);
+        menuItem = Ide.getMenubar().createMenuItem(TrimIdeAction.get(controller, commandId));
         return menuItem;
     }
 }
