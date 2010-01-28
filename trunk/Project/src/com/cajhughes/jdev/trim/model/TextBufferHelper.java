@@ -1,8 +1,7 @@
-package chughes.jdev.trim.model;
+package com.cajhughes.jdev.trim.model;
 
 import java.io.IOException;
 import java.io.StringWriter;
-import javax.swing.undo.UndoableEdit;
 import oracle.javatools.buffer.LineMap;
 import oracle.javatools.buffer.TextBuffer;
 
@@ -20,8 +19,7 @@ public class TextBufferHelper
     private StringBuffer stringBuffer = null;
     private TextBuffer textBuffer = null;
 
-    public TextBufferHelper(final TextBuffer buffer)
-    {
+    public TextBufferHelper(final TextBuffer buffer) {
         this.textBuffer = buffer;
         this.stringBuffer = getText();
     }
@@ -31,8 +29,7 @@ public class TextBufferHelper
      * end of the specified line index.  The buffer returned does not contain
      * any trailing carriage return or line feed character.
      */
-    public StringBuffer getLine(final int line)
-    {
+    public StringBuffer getLine(final int line) {
         StringBuffer result = null;
         if (textBuffer != null && stringBuffer != null) {
             LineMap lineMap = textBuffer.getLineMap();
@@ -66,8 +63,7 @@ public class TextBufferHelper
      * StringBuffer is populated with the same character offsets as the
      * underlying TextBuffer.
      */
-    public StringBuffer getText()
-    {
+    public StringBuffer getText() {
         StringBuffer result = null;
         if (textBuffer != null) {
             StringWriter writer = new StringWriter();
@@ -106,8 +102,7 @@ public class TextBufferHelper
      * class are zero-based, as compared to the one-based value returned
      * from getLineCount().
      */
-    public boolean isLastLine(final int index)
-    {
+    public boolean isLastLine(final int index) {
         boolean isLast = false;
         if (textBuffer != null) {
             LineMap lineMap = textBuffer.getLineMap();
@@ -124,9 +119,7 @@ public class TextBufferHelper
      * removal of the last <i>count</i> characters (not including any
      * terminating end-of-line character) from line <i>line</i>.
      */
-    public UndoableEdit removeTrailingChars(final int line, final int count)
-    {
-        UndoableEdit result = null;
+    public void removeTrailingChars(final int line, final int count) {
         if (textBuffer != null) {
             LineMap lineMap = textBuffer.getLineMap();
             int lineCount = lineMap.getLineCount();
@@ -139,11 +132,10 @@ public class TextBufferHelper
                 else {
                     startPosition = (lineEndOffset - count - 1);
                 }
-                result = textBuffer.remove(startPosition, count);
+                textBuffer.remove(startPosition, count);
                 stringBuffer.delete(startPosition,
                                     (startPosition + count + 1));
             }
         }
-        return result;
     }
 }
