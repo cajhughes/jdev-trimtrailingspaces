@@ -1,7 +1,7 @@
-package chughes.jdev.util;
+package com.cajhughes.jdev.util;
 
 import oracle.ide.Context;
-import oracle.ide.model.Element;
+import oracle.ide.model.Node;
 import oracle.ide.model.TextNode;
 
 /*
@@ -10,14 +10,12 @@ import oracle.ide.model.TextNode;
  * This class provides static helper methods for identifying nodes within
  * the JDeveloper framework.
  */
-public final class NodeUtil
-{
-    public static boolean isTextNode(final Context context)
-    {
+public final class NodeUtil {
+    public static boolean isTextNode(final Context context) {
         boolean result = false;
         if (context != null) {
-            Element element = context.getElement();
-            result = ((element != null) && (element instanceof TextNode));
+            Node node = context.getNode();
+            result = ((node != null) && (node instanceof TextNode));
         }
         return result;
     }
