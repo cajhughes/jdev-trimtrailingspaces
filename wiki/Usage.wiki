@@ -25,3 +25,5 @@ To specify the command as a Save Action:
   * Highlight the Save Actions node in the Preferences navigator
   * Click the Add... button
   * Select the Trim Trailing Whitespace action from the Select actions to add dialog
+
+http://dl.dropbox.com/u/191565/jdev/save-action.png
