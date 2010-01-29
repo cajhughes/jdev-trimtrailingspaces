@@ -5,7 +5,7 @@
 
 The "Trim Trailing Space" extension to Oracle's JDeveloper IDE is installed in the standard way, which involves the following steps:
 
-  # Launch Oracle JDeveloper
+  # Launch [http://www.oracle.com/technology/jdev Oracle JDeveloper]
   # Select the Help -> Check for Updates... menu option
   # When selecting the Source location, check "Open Source and Partners Extensions"
   # In the resulting list, check the Trim Trailing Space option
