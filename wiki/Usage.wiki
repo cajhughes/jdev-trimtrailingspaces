@@ -3,7 +3,7 @@
 
 Following successful installation, and re-start of JDeveloper, the extension can be invoked by:
 
-  * Selecting the context menu (right-click or CTRL-click) within the Code Editor
+  * Selecting the context menu (right-click or CTRL-click) within the Code Editor http://dl.dropbox.com/u/191565/jdev/context-menu.png
   * Via the shortcut key associated with the command
 
 To associate a shortcut key with this command:
@@ -13,4 +13,4 @@ To associate a shortcut key with this command:
   * Select the "Trim Trailing Whitespace" command from the Avaiable Commands
   * Place focus into the New Shortcut field
   * Press the desired key combinationon your keyboard
-  * Click the Assign button
+  * Click the Assign button http://dl.dropbox.com/u/191565/jdev/shortcut-key.png
