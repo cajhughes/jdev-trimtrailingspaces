@@ -1,3 +1,4 @@
+#labels Featured
 # How to Use the extension
 
 Following successful installation, and re-start of JDeveloper, the extension can be invoked by:
