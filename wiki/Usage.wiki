@@ -11,7 +11,7 @@ To associate a shortcut key with this command:
 
   * Select the Tools -> Preferences... menu option
   * Highlight the Shortcut Keys node in the Preferences navigator
-  * Select the "Trim Trailing Whitespace" command from the Avaiable Commands
+  * Select the "Trim Trailing Whitespace" command from the Available Commands
   * Place focus into the New Shortcut field
   * Press the desired key combinationon your keyboard
   * Click the Assign button
