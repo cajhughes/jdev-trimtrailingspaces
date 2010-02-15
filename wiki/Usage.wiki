@@ -4,26 +4,3 @@
 Following successful installation, and re-start of JDeveloper, the extension can be invoked by:
 
   * Selecting the context menu (right-click or CTRL-click) within the Code Editor
-  * Via a shortcut key associated with the command
-  * As a Save Action when a file is saved
-
-To associate a shortcut key with this command:
-
-  * Select the Tools -> Preferences... menu option
-  * Highlight the Shortcut Keys node in the Preferences navigator
-  * Select the "Trim Trailing Whitespace" command from the Available Commands
-  * Place focus into the New Shortcut field
-  * Press the desired key combinationon your keyboard
-  * Click the Assign button
-
-http://dl.dropbox.com/u/191565/jdev/shortcut-key.png
-
-To specify the command as a Save Action:
-
-  * Select the Tools -> Preferences... menu option
-  * Expand the Code Editor node in the Preferences navigator
-  * Highlight the Save Actions node in the Preferences navigator
-  * Click the Add... button
-  * Select the Trim Trailing Whitespace action from the Select actions to add dialog
-
-http://dl.dropbox.com/u/191565/jdev/save-action.png
