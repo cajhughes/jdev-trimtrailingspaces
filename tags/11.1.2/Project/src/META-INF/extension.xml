@@ -1,0 +1,61 @@
+<extension esdk-version="1.0"
+           id="com.cajhughes.jdev.TrimTrailing"
+           rsbundle-class="com.cajhughes.jdev.trim.Resource"
+           version="11.1.2"
+           xmlns="http://jcp.org/jsr/198/extension-manifest">
+  <name>${EXTENSION_NAME}</name>
+  <owner>${OWNER_NAME}</owner>
+  <dependencies>
+   <import>oracle.ide</import>
+   <import>oracle.ide.ceditor</import>
+  </dependencies>
+  <classpaths>
+    <classpath>../../ide/lib/javatools.jar</classpath>
+  </classpaths>
+  <hooks>
+    <jdeveloper-hook xmlns="http://xmlns.oracle.com/jdeveloper/1013/extension">
+      <actions>
+        <action id="com.cajhughes.jdev.TrimTrailing">
+          <properties>
+            <property name="Name">${EXTENSION_NAME}</property>
+            <property name="SmallIcon">${ICON}</property>
+            <property name="LongDescription">${EXTENSION_NAME}</property>
+            <property name="Category">Edit</property>
+          </properties>
+          <controller-class>com.cajhughes.jdev.trim.controller.TrimController</controller-class>
+          <command-class>com.cajhughes.jdev.trim.TrimCommand</command-class>
+        </action>
+      </actions>
+      <addins>
+        <addin>com.cajhughes.jdev.trim.TrimAddin</addin>
+      </addins>
+      <context-menu-listeners>
+        <site idref="editor">
+            <listener-class>com.cajhughes.jdev.trim.view.TrimMenuListener</listener-class>
+        </site>
+      </context-menu-listeners>
+    </jdeveloper-hook>
+    <menu-hook>
+      <menus>
+        <menubar id="javax.ide.view.MAIN_WINDOW_MENUBAR_ID">
+          <menu id="javax.ide.EDIT_MENU_ID">
+            <section id="javax.ide.COPY_PASTE_SECTION_ID">
+              <item action-ref="com.cajhughes.jdev.TrimTrailing"/>
+            </section>
+          </menu>
+        </menubar>
+      </menus>
+      <toolbars>
+        <toolbar id="javax.ide.view.MAIN_WINDOW_TOOLBAR_ID">
+          <section id="javax.ide.COPY_PASTE_SECTION_ID">
+            <item action-ref="com.cajhughes.jdev.TrimTrailing"/>
+          </section>
+        </toolbar>
+      </toolbars>
+    </menu-hook>
+    <feature-hook>
+      <description>${DESCRIPTION}</description>
+      <optional>true</optional>
+    </feature-hook>
+  </hooks>
+</extension>
