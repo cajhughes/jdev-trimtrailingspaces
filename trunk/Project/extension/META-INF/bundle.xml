@@ -4,9 +4,9 @@
   xmlns:u="http://xmlns.oracle.com/jdeveloper/update">
   <u:update id="com.cajhughes.jdev.TrimTrailing">
     <u:name>Trim Trailing Space</u:name>
-    <u:version>11.1.1</u:version>
+    <u:version>11.1.2</u:version>
     <u:author>Chris Hughes</u:author>
-    <u:author-url>http://www.cajhughes.com/jdev/trim-trailing-space-jdeveloper.html</u:author-url>
+    <u:author-url>http://code.google.com/p/jdev-trimtrailingspaces/</u:author-url>
     <u:description>Provides an option to trim all trailing white space from the current source file</u:description>
     <u:requirements>
       <u:requires-extension id="oracle.ide" minVersion="11.1.1"/>
