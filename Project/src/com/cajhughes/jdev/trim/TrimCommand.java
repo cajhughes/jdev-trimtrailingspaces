@@ -1,6 +1,7 @@
 package com.cajhughes.jdev.trim;
 
 import com.cajhughes.jdev.trim.model.TextBufferHelper;
+import com.cajhughes.jdev.trim.view.resource.TrimResourceUtil;
 import com.cajhughes.jdev.util.NodeUtil;
 import com.cajhughes.jdev.util.StringBufferUtil;
 import javax.swing.undo.UndoableEdit;
@@ -13,17 +14,20 @@ import oracle.javatools.buffer.LineMap;
 import oracle.javatools.buffer.TextBuffer;
 
 public final class TrimCommand extends Command {
-    private UndoableEdit undo = null;
     private static final Node[] affectedNodes = {};
+    private static final String EXTENSION_ID = "com.cajhughes.jdev.TrimTrailing";
+    private static final String EXTENSION_NAME = TrimResourceUtil.getString("EXTENSION_NAME");
+
+    private UndoableEdit undo = null;
 
     public TrimCommand() {
         super(actionId(), NORMAL);
     }
 
     public static int actionId() {
-        Integer cmdId = Ide.findOrCreateCmdID("com.cajhughes.jdev.TrimTrailing");
+        Integer cmdId = Ide.findOrCreateCmdID(EXTENSION_ID);
         if (cmdId == null) {
-            throw new IllegalStateException("Action com.cajhughes.jdev.TrimTrailing not found.");
+            throw new IllegalStateException("Action, " + EXTENSION_ID + ", not found.");
         }
         else {
             return cmdId.intValue();
@@ -62,7 +66,7 @@ public final class TrimCommand extends Command {
     }
 
     public String getName() {
-        return "Trim Trailing Space";
+        return EXTENSION_NAME;
     }
 
     public int getType() {
