@@ -37,7 +37,7 @@ public final class TrimCommand extends Command {
     public int doit() throws Exception {
         Context context = getContext();
         if (context != null) {
-            if (NodeUtil.isTextNode(context)) {
+            if (NodeUtil.isEditableTextNode(context)) {
                 TextNode node = (TextNode)context.getNode();
                 try {
                     Ide.getWaitCursor().show();
@@ -77,7 +77,7 @@ public final class TrimCommand extends Command {
         if (undo != null) {
             Context context = getContext();
             if (context != null) {
-                if (NodeUtil.isTextNode(context)) {
+                if (NodeUtil.isEditableTextNode(context)) {
                     TextNode node = (TextNode)context.getNode();
                     try {
                         Ide.getWaitCursor().show();

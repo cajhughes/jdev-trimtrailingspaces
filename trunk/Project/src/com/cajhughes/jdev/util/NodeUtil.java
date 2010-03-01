@@ -19,4 +19,12 @@ public final class NodeUtil {
         }
         return result;
     }
+
+    public static boolean isEditableTextNode(final Context context) {
+        boolean result = false;
+        if (isTextNode(context)) {
+            result = !context.getNode().isReadOnly();
+        }
+        return result;
+    }
 }
