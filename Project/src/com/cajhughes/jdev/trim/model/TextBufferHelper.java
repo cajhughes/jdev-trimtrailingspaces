@@ -5,17 +5,16 @@ import java.io.StringWriter;
 import oracle.javatools.buffer.LineMap;
 import oracle.javatools.buffer.TextBuffer;
 
-/*
- * @author Chris Hughes
- *
+/**
  * This class provides helper methods for handling TextBuffer content.
  *
  * No manipulation of the TextBuffer passed into the constructor should be
  * performed via methods separate from this class, otherwise incorrect results
  * may be returned for the <i>getLine</i> method.
+ *
+ * @author Chris Hughes
  */
-public class TextBufferHelper
-{
+public class TextBufferHelper {
     private StringBuffer stringBuffer = null;
     private TextBuffer textBuffer = null;
 

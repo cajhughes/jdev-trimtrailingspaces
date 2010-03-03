@@ -4,11 +4,11 @@ import oracle.ide.Context;
 import oracle.ide.model.Node;
 import oracle.ide.model.TextNode;
 
-/*
- * @author Chris Hughes
- *
+/**
  * This class provides static helper methods for identifying nodes within
  * the JDeveloper framework.
+ *
+ * @author Chris Hughes
  */
 public final class NodeUtil {
     public static boolean isTextNode(final Context context) {

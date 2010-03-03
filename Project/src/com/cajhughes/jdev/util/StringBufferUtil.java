@@ -1,9 +1,9 @@
 package com.cajhughes.jdev.util;
 
-/*
- * @author Chris Hughes
- *
+/**
  * This class provides helper methods for the StringBuffer class.
+ *
+ * @author Chris Hughes
  */
 public class StringBufferUtil {
     /*
