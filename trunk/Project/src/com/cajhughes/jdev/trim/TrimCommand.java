@@ -13,6 +13,12 @@ import oracle.ide.model.TextNode;
 import oracle.javatools.buffer.LineMap;
 import oracle.javatools.buffer.TextBuffer;
 
+/**
+ * This class extends the Command class, and provides the core implementation
+ * of the TrimTrailing action.
+ *
+ * @author Chris Hughes
+ */
 public final class TrimCommand extends Command {
     private static final Node[] affectedNodes = {};
     private static final String EXTENSION_ID = "com.cajhughes.jdev.TrimTrailing";
@@ -34,6 +40,7 @@ public final class TrimCommand extends Command {
         }
     }
 
+    @Override
     public int doit() throws Exception {
         Context context = getContext();
         if (context != null) {
@@ -61,18 +68,22 @@ public final class TrimCommand extends Command {
         return OK;
     }
 
+    @Override
     public Node[] getAffectedNodes() {
         return affectedNodes;
     }
 
+    @Override
     public String getName() {
         return EXTENSION_NAME;
     }
 
+    @Override
     public int getType() {
         return NORMAL;
     }
 
+    @Override
     public int undo() {
         if (undo != null) {
             Context context = getContext();
